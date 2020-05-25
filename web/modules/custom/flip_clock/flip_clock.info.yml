@@ -1,0 +1,5 @@
+name: 'Flip Clock'
+type: module
+description: 'This Module handles custom Clock'
+package: 'Custom modules'
+core: '8.x'

@@ -1,0 +1,8 @@
+uuid: ebfd2df6-6d7c-46e5-88a9-a81711113e83
+langcode: en
+status: true
+dependencies: {  }
+name: 'Stock Identifier'
+vid: stock_identifier
+description: 'List of Stocks used in Stock Information Content Type'
+weight: 0

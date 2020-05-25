@@ -1,0 +1,41 @@
+uuid: dbd4794f-d2c9-49c8-84d7-838f77f95718
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.investment_analysis
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - barrio_report
+id: views_block__investment_analysis_investment_by_date_block
+theme: barrio_report
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:investment_analysis-investment_by_date_block'
+settings:
+  id: 'views_block:investment_analysis-investment_by_date_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /tracker
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      depositor: depositor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

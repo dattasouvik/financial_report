@@ -1,0 +1,23 @@
+uuid: f00e42e6-c8c8-4bcc-8fa1-0e0d81402702
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quantity_sold
+    - paragraphs.paragraphs_type.stock_component
+id: paragraph.stock_component.field_quantity_sold
+field_name: field_quantity_sold
+entity_type: paragraph
+bundle: stock_component
+label: 'Quantity Sold'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

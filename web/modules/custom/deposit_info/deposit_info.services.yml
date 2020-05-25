@@ -1,0 +1,7 @@
+services:
+  deposit_info.old_nodes:
+    class: \Drupal\deposit_info\OldNodesService
+    arguments: ["@entity_type.manager", "@entity.query"]
+  deposit_info.mail_handler:
+    class: \Drupal\deposit_info\Controller\MailHandler
+    arguments: ["@entity.manager","@current_user"]

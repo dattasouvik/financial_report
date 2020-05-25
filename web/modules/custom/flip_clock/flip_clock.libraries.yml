@@ -1,0 +1,12 @@
+flip_clock.block:
+  version: 1.x
+  css:
+    theme:
+      css/flip-clock.css: {weight: -95}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupal.ajax
+    - core/drupalSettings
+    - core/drupal.dialog

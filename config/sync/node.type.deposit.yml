@@ -1,0 +1,17 @@
+uuid: eaad635e-b23b-4a8f-a361-2c040150d9f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Deposit
+type: deposit
+description: 'Information about deposit made by an individual'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,5 @@
+name: 'Deposit Info'
+type: module
+description: 'This Module handles data for deposit form'
+package: 'Custom modules'
+core: '8.x'

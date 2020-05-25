@@ -1,0 +1,14 @@
+uuid: 8df1a01c-7f46-4a0a-b879-c3744a319969
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.depositor
+  module:
+    - user
+id: user_remove_role_action.depositor
+label: 'Remove the Depositor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: depositor

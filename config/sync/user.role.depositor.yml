@@ -1,0 +1,17 @@
+uuid: bc6b0e07-9e18-403e-bc34-fdcb5f037256
+langcode: en
+status: true
+dependencies: {  }
+id: depositor
+label: Depositor
+weight: 3
+is_admin: null
+permissions:
+  - 'access deposit info config'
+  - 'access deposit information form'
+  - 'change own username'
+  - 'create deposit content'
+  - 'delete own deposit content'
+  - 'edit own deposit content'
+  - 'view basic revisions'
+  - 'view own unpublished content'

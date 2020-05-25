@@ -1,0 +1,1422 @@
+uuid: a4ab1f48-95f4-4910-8bc9-329ff456b751
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_account_number
+    - field.storage.node.field_deposit_amount
+    - field.storage.node.field_deposit_date
+    - node.type.deposit
+    - user.role.administrator
+    - user.role.depositor
+  module:
+    - charts
+    - charts_c3
+    - charts_highcharts
+    - datetime
+    - node
+    - user
+id: investment_analysis
+label: 'Investment Analysis'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            depositor: depositor
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: chart
+        options:
+          grouping: {  }
+          allow_advanced_rendering: 0
+          library: c3
+          type: column
+          label_field: ''
+          fields:
+            table: ''
+          data_fields:
+            nid: nid
+          field_colors:
+            nid: '#2f7ed8'
+          title: Testing
+          title_position: out
+          tooltips: ''
+          data_labels: ''
+          data_markers: 'FALSE'
+          legend_position: right
+          background: ''
+          three_dimensional: 0
+          polar: 0
+          width: ''
+          width_units: '%'
+          height: ''
+          height_units: px
+          max: '100'
+          min: '0'
+          green_from: '85'
+          green_to: '100'
+          yellow_from: '50'
+          yellow_to: '85'
+          red_from: '0'
+          red_to: '50'
+          xaxis_title: ''
+          xaxis_labels_rotation: '0'
+          yaxis_title: ''
+          yaxis_min: ''
+          yaxis_max: ''
+          yaxis_prefix: ''
+          yaxis_suffix: ''
+          yaxis_decimal_count: ''
+          yaxis_labels_rotation: '0'
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            title: title
+          separator: ''
+          hide_empty: false
+      fields:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: id
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            deposit: deposit
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: 'Investment Analysis'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+      arguments: {  }
+      display_extenders: {  }
+      use_ajax: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.roles
+      tags: {  }
+  chart_extension_1:
+    display_plugin: chart_extension
+    id: chart_extension_1
+    display_title: 'Chart attachment'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      style:
+        type: chart
+        options:
+          grouping: {  }
+          allow_advanced_rendering: 1
+          library: highcharts
+          type: line
+          label_field: title
+          fields:
+            table: ''
+          data_fields:
+            nid: nid
+            field_account_number: field_account_number
+            title: 0
+          field_colors:
+            nid: '#ff0000'
+            field_account_number: '#00ff00'
+            title: '#1aadce'
+          title: 'Investment Analysis'
+          title_position: out
+          tooltips: 'TRUE'
+          data_labels: 'TRUE'
+          data_markers: 'TRUE'
+          legend_position: top
+          background: ''
+          three_dimensional: 0
+          polar: 0
+          width: ''
+          width_units: '%'
+          height: ''
+          height_units: px
+          max: '100'
+          min: '0'
+          green_from: '85'
+          green_to: '100'
+          yellow_from: '50'
+          yellow_to: '85'
+          red_from: '0'
+          red_to: '50'
+          xaxis_title: 'Deposit Date'
+          xaxis_labels_rotation: '0'
+          yaxis_title: 'Account Number'
+          yaxis_min: ''
+          yaxis_max: ''
+          yaxis_prefix: ''
+          yaxis_suffix: ''
+          yaxis_decimal_count: ''
+          yaxis_labels_rotation: '0'
+      defaults:
+        style: false
+        row: false
+        exposed_form: false
+        query: false
+        filters: false
+        filter_groups: false
+        fields: false
+        relationships: false
+        arguments: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: null
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            deposit: deposit
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      fields:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit (Id)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+        field_account_number:
+          id: field_account_number
+          table: node__field_account_number
+          field: field_account_number
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Account Number'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit Title'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+      inherit_yaxis: '1'
+      displays:
+        tracker_page: tracker_page
+      inherit_arguments: 1
+      inherit_exposed_filters: 1
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          required: true
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+      arguments:
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_uid
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_account_number'
+  investment_by_date_block:
+    display_plugin: block
+    id: investment_by_date_block
+    display_title: 'Investment By Deposit Date'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      style:
+        type: chart
+        options:
+          grouping: {  }
+          allow_advanced_rendering: 0
+          library: highcharts
+          type: line
+          label_field: title
+          fields:
+            table: ''
+          data_fields:
+            nid: nid
+            title: 0
+          field_colors:
+            nid: '#ff0000'
+            title: '#1aadce'
+          title: 'Investment By Deposit Date'
+          title_position: top
+          tooltips: 'TRUE'
+          data_labels: 'TRUE'
+          data_markers: 'TRUE'
+          legend_position: top
+          background: ''
+          three_dimensional: 0
+          polar: 0
+          width: ''
+          width_units: '%'
+          height: ''
+          height_units: px
+          max: '100'
+          min: '0'
+          green_from: '85'
+          green_to: '100'
+          yellow_from: '50'
+          yellow_to: '85'
+          red_from: '0'
+          red_to: '50'
+          xaxis_title: 'Deposit Title'
+          xaxis_labels_rotation: '0'
+          yaxis_title: 'Deposit Id'
+          yaxis_min: ''
+          yaxis_max: ''
+          yaxis_prefix: ''
+          yaxis_suffix: ''
+          yaxis_decimal_count: ''
+          yaxis_labels_rotation: '0'
+      defaults:
+        style: false
+        row: false
+        exposed_form: false
+        query: false
+        filters: false
+        filter_groups: false
+        fields: false
+        relationships: false
+        arguments: false
+        title: false
+        empty: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: null
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            deposit: deposit
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      fields:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit (Id)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit Title'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          required: true
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+      arguments:
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_uid
+      display_description: ''
+      title: 'Investment By Deposit Date'
+      block_description: 'Investment By Deposit Date'
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'Data Unavailable'
+          plugin_id: text_custom
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags: {  }
+  tracker_page:
+    display_plugin: page
+    id: tracker_page
+    display_title: 'Investment Analysis Page'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      style:
+        type: chart
+        options:
+          grouping: {  }
+          allow_advanced_rendering: 1
+          library: highcharts
+          type: column
+          label_field: field_deposit_date
+          fields:
+            table: ''
+          data_fields:
+            field_deposit_amount: field_deposit_amount
+            field_deposit_date: 0
+            title: title
+          field_colors:
+            field_deposit_amount: '#0000ff'
+            field_deposit_date: '#0d233a'
+            title: '#1aadce'
+          title: 'Investment Analysis'
+          title_position: out
+          tooltips: 'TRUE'
+          data_labels: 'TRUE'
+          data_markers: 'TRUE'
+          legend_position: top
+          background: ''
+          three_dimensional: 0
+          polar: 0
+          width: ''
+          width_units: '%'
+          height: ''
+          height_units: '%'
+          max: '100'
+          min: '0'
+          green_from: '85'
+          green_to: '100'
+          yellow_from: '50'
+          yellow_to: '85'
+          red_from: '0'
+          red_to: '50'
+          xaxis_title: 'Deposit Date'
+          xaxis_labels_rotation: '0'
+          yaxis_title: 'Amount (INR)'
+          yaxis_min: ''
+          yaxis_max: ''
+          yaxis_prefix: ''
+          yaxis_suffix: ''
+          yaxis_decimal_count: '2'
+          yaxis_labels_rotation: '0'
+      defaults:
+        style: false
+        row: false
+        exposed_form: false
+        query: false
+        filters: false
+        filter_groups: false
+        fields: false
+        relationships: false
+        arguments: false
+        empty: false
+        pager: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: null
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            deposit: deposit
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      fields:
+        field_deposit_amount:
+          id: field_deposit_amount
+          table: node__field_deposit_amount
+          field: field_deposit_amount
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit Amount(INR)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_unformatted
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_deposit_date:
+          id: field_deposit_date
+          table: node__field_deposit_date
+          field: field_deposit_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit Date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: d/m/Y
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Deposit Title'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+      display_description: ''
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          required: true
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+      arguments:
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_uid
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'Data Unavailable'
+          plugin_id: text_custom
+      pager:
+        type: none
+        options:
+          offset: 0
+      path: tracker
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_deposit_amount'
+        - 'config:field.storage.node.field_deposit_date'

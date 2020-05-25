@@ -1,0 +1,7 @@
+access deposit info config:
+  title: 'access deposit info config'
+  description: 'access deposit info config.'
+  restrict access: true
+access deposit information form:
+  title: 'access deposit information form'
+  description: 'Access Deposit Information form.'

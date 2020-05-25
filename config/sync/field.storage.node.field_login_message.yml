@@ -1,0 +1,21 @@
+uuid: c9222fe4-7b59-4b6a-825c-c08fe719a4a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_login_message
+field_name: field_login_message
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+{% if items %}
+  <div class="card">
+  <div class="card-header p-3 mb-2 bg-primary text-white text-center">
+    Investment Data
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item bg-light text-dark">
+      {% if items.deposit_amount %}
+        Deposit Value &nbsp; <span>&#x20b9;</span>{{ items.deposit_amount }}
+      {% endif %}
+    </li>
+    <li class="list-group-item bg-success text-white">
+      {% if items.maturity_amount %}
+        Maturity Value &nbsp; <span>&#x20b9;</span>{{ items.maturity_amount }}
+      {% endif %}
+    </li>
+  </ul>
+  <div class="card-body text-center">
+    <a href="{{ path('deposit_info.deposit_download') }}" class="card-link text-dark">Generate CSV</a>
+  </div>
+  </div>
+{% endif %}
+

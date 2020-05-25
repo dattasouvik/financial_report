@@ -1,0 +1,13 @@
+deposit_info.deposit_form:
+  version: 1.x
+  js:
+    js/deposit_form.js: {}
+  css:
+    theme:
+      css/deposit-form.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/jquery.ui.autocomplete
+    - core/jquery.ui.dialog

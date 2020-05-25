@@ -1,0 +1,108 @@
+uuid: fe635d42-fdc6-417d-ad93-62b04e721b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stock_information.field_added_
+    - field.field.node.stock_information.field_bid_cost_price_per_unit
+    - field.field.node.stock_information.field_brokerage_charges
+    - field.field.node.stock_information.field_buy_date
+    - field.field.node.stock_information.field_cost_price_per_unit
+    - field.field.node.stock_information.field_quantity_available
+    - field.field.node.stock_information.field_quantity_purchased
+    - field.field.node.stock_information.field_stock_component
+    - field.field.node.stock_information.field_stock_identifier
+    - node.type.stock_information
+  module:
+    - datetime
+    - entity_reference_revisions
+    - user
+id: node.stock_information.default
+targetEntityType: node
+bundle: stock_information
+mode: default
+content:
+  field_added_:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_bid_cost_price_per_unit:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_brokerage_charges:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_buy_date:
+    weight: 101
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_cost_price_per_unit:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quantity_available:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quantity_purchased:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_stock_component:
+    type: entity_reference_revisions_entity_view
+    weight: 108
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_stock_identifier:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

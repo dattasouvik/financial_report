@@ -1,0 +1,22 @@
+uuid: e4e51ec6-5092-4993-a41b-75037cbc3270
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.deposit
+id: node.deposit.promote
+field_name: promote
+entity_type: node
+bundle: deposit
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

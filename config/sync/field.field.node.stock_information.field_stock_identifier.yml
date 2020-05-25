@@ -1,0 +1,29 @@
+uuid: 4def20ea-24aa-4bb1-b2d2-3192ad9bfd82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stock_identifier
+    - node.type.stock_information
+    - taxonomy.vocabulary.stock_identifier
+id: node.stock_information.field_stock_identifier
+field_name: field_stock_identifier
+entity_type: node
+bundle: stock_information
+label: 'Stock Identifier'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      stock_identifier: stock_identifier
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

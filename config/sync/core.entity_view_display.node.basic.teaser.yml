@@ -1,0 +1,20 @@
+uuid: 9beb2c7b-5f17-488d-ba1b-9dc309228d69
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.basic.field_login_message
+    - field.field.node.basic.field_privacy_policy
+    - node.type.basic
+  module:
+    - user
+id: node.basic.teaser
+targetEntityType: node
+bundle: basic
+mode: teaser
+content: {  }
+hidden:
+  field_login_message: true
+  field_privacy_policy: true
+  links: true

@@ -1,0 +1,33 @@
+uuid: f689310e-7e34-43f1-be0a-8c93b201004e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic.field_login_message
+    - field.field.node.basic.field_privacy_policy
+    - node.type.basic
+  module:
+    - text
+    - user
+id: node.basic.default
+targetEntityType: node
+bundle: basic
+mode: default
+content:
+  field_login_message:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_privacy_policy:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  links: true

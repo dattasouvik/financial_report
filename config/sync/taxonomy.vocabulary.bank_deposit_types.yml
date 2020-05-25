@@ -1,0 +1,8 @@
+uuid: 3fa4e0a3-aa25-4e12-b2ee-c275556f1c14
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bank Deposit Types'
+vid: bank_deposit_types
+description: 'List of Available Bank Deposits'
+weight: 0

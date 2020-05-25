@@ -1,0 +1,17 @@
+uuid: 056bf450-600c-45e1-a1fe-604f9b7ea02e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Basic
+type: basic
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

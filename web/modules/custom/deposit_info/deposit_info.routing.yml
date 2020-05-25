@@ -1,0 +1,28 @@
+deposit_info.new_deposit_form:
+  path: '/add/deposit'
+  defaults:
+    _form:  '\Drupal\deposit_info\Form\AddDepositInfo'
+    _title: 'Enter Deposit Information'
+  requirements:
+    _permission: 'access deposit information form'
+deposit_info.edit_deposit_form:
+  path: '/edit/deposit/{node_id}'
+  defaults:
+    _form:  '\Drupal\deposit_info\Form\EditDepositInfo'
+    _title: 'Edit Deposit Information'
+  requirements:
+    _permission: 'access deposit information form'
+deposit_info.settings.admin_form:
+  path: '/admin/config/mail-configuration'
+  defaults:
+    _form:  '\Drupal\deposit_info\Form\DepositMailSettings'
+    _title: 'Mail Configuration'
+  requirements:
+    _permission: 'access deposit info config'
+deposit_info.deposit_download:
+  path: '/deposit/download'
+  defaults:
+    _controller:  '\Drupal\deposit_info\Controller\DepositInfoDownload::depositDownload'
+    _format: json
+  requirements:
+    _permission: 'access deposit information form'

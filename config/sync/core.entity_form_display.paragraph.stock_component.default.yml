@@ -1,0 +1,57 @@
+uuid: e16c1541-bc85-4530-af58-570318781f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stock_component.field_bid_sell_price_per_unit
+    - field.field.paragraph.stock_component.field_brokerage_charges
+    - field.field.paragraph.stock_component.field_quantity_sold
+    - field.field.paragraph.stock_component.field_sell_date
+    - field.field.paragraph.stock_component.field_sell_price_per_unit
+    - paragraphs.paragraphs_type.stock_component
+  module:
+    - datetime
+id: paragraph.stock_component.default
+targetEntityType: paragraph
+bundle: stock_component
+mode: default
+content:
+  field_bid_sell_price_per_unit:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_brokerage_charges:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_quantity_sold:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_sell_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_sell_price_per_unit:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

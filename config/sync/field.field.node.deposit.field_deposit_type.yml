@@ -1,0 +1,19 @@
+uuid: 583b60b0-4f6f-4723-bf16-419e75a53b64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deposit_type
+    - node.type.deposit
+id: node.deposit.field_deposit_type
+field_name: field_deposit_type
+entity_type: node
+bundle: deposit
+label: 'Deposit Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

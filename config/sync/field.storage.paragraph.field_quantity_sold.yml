@@ -1,0 +1,20 @@
+uuid: 2e3d5399-1414-448c-bf10-e6be2a6a80cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_quantity_sold
+field_name: field_quantity_sold
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

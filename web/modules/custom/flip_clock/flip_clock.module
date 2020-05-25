@@ -1,0 +1,12 @@
+<?php
+/**
+* Implements hook_theme().
+*/
+function flip_clock_theme() {
+  return [
+    'flip_clock' => [
+      'variables' => ['items' => NULL],
+      'path' => drupal_get_path('module', 'flip_clock') . '/templates/block',
+    ],
+  ];
+}

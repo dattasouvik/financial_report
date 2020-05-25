@@ -1,0 +1,9 @@
+uuid: 572c00b4-b6a2-40e0-aa0c-9d683bd5df20
+langcode: en
+status: true
+dependencies: {  }
+id: stock_component
+label: 'Stock Component'
+icon_uuid: null
+description: '<b>List Components used in Stock Information </b>  Content Type'
+behavior_plugins: {  }

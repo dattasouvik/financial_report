@@ -1,0 +1,150 @@
+uuid: ddf778fb-b523-4725-a8af-2e5cc0e05c2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.deposit.field_account_number
+    - field.field.node.deposit.field_annual_interest_rate
+    - field.field.node.deposit.field_bank_name
+    - field.field.node.deposit.field_created_by
+    - field.field.node.deposit.field_deposit_amount
+    - field.field.node.deposit.field_deposit_date
+    - field.field.node.deposit.field_deposit_methods
+    - field.field.node.deposit.field_deposit_type
+    - field.field.node.deposit.field_duration
+    - field.field.node.deposit.field_maturity_amount
+    - field.field.node.deposit.field_maturity_date
+    - field.field.node.deposit.field_rate_of_interest
+    - field.field.node.deposit.field_status
+    - node.type.deposit
+  module:
+    - datetime
+    - path
+id: node.deposit.default
+targetEntityType: node
+bundle: deposit
+mode: default
+content:
+  field_account_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_annual_interest_rate:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_bank_name:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_created_by:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_deposit_amount:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_deposit_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_deposit_methods:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_deposit_type:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_duration:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_maturity_amount:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_maturity_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_rate_of_interest:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_status:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

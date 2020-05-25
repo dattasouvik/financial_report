@@ -1,0 +1,30 @@
+uuid: 83b90758-ec8a-4613-a8ca-72c2deb252c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - deposit_info
+    - user
+  theme:
+    - bartik
+id: depositinformationpanel
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: custom_deposit_information_panel
+settings:
+  id: custom_deposit_information_panel
+  label: 'Deposit Information Panel'
+  provider: deposit_info
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      depositor: depositor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

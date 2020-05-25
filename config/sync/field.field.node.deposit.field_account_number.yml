@@ -1,0 +1,19 @@
+uuid: 0853cf8f-28b3-4631-bd0b-37e23e98a684
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_account_number
+    - node.type.deposit
+id: node.deposit.field_account_number
+field_name: field_account_number
+entity_type: node
+bundle: deposit
+label: 'Account Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

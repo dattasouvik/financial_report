@@ -1,0 +1,38 @@
+uuid: 478e1fe4-da59-4289-9c55-85d301aa3486
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stock_information.field_added_
+    - field.field.node.stock_information.field_bid_cost_price_per_unit
+    - field.field.node.stock_information.field_brokerage_charges
+    - field.field.node.stock_information.field_buy_date
+    - field.field.node.stock_information.field_cost_price_per_unit
+    - field.field.node.stock_information.field_quantity_available
+    - field.field.node.stock_information.field_quantity_purchased
+    - field.field.node.stock_information.field_stock_component
+    - field.field.node.stock_information.field_stock_identifier
+    - node.type.stock_information
+  module:
+    - user
+id: node.stock_information.teaser
+targetEntityType: node
+bundle: stock_information
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_added_: true
+  field_bid_cost_price_per_unit: true
+  field_brokerage_charges: true
+  field_buy_date: true
+  field_cost_price_per_unit: true
+  field_quantity_available: true
+  field_quantity_purchased: true
+  field_stock_component: true
+  field_stock_identifier: true

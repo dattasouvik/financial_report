@@ -1,0 +1,20 @@
+uuid: 49d6a35d-91b2-42f1-8424-7f1a2521a356
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_buy_date
+field_name: field_buy_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

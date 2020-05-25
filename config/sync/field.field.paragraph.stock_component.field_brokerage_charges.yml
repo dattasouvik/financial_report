@@ -1,0 +1,23 @@
+uuid: a614947a-a9f7-43e2-a17c-60e4fa2517fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_brokerage_charges
+    - paragraphs.paragraphs_type.stock_component
+id: paragraph.stock_component.field_brokerage_charges
+field_name: field_brokerage_charges
+entity_type: paragraph
+bundle: stock_component
+label: 'Brokerage Charges'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

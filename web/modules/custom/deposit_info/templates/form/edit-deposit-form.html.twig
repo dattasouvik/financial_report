@@ -1,0 +1,107 @@
+{#
+/**
+* @file
+* Default theme implementation for a node edit form.
+*
+* Two column template for the node add/edit form.
+*
+* This template will be used when a node edit form specifies 'node_edit_form'
+* as its #theme callback.  Otherwise, by default, node add/edit forms will be
+* themed by form.html.twig.
+*
+* Available variables:
+* - form: The node add/edit form.
+*
+* @see seven_form_node_form_alter()
+*
+* @ingroup themeable
+*/
+#}
+{# {{ attach_library('deposit_info/deposit_info.deposit_form') }} #}
+
+{# Alert Message #}
+<div class="row">
+  <div class="col-md-12 col-xl-12 py-1">
+    {{ form.deposit_id }}
+    {{ form.selected_type }}
+    {{ form.errMsg }}
+  </div>
+</div>
+
+<!-- Grid row -->
+<div class="row accordion-gradient-bcg d-flex">
+  <!-- Grid column -->
+  <div class="col-md-12 col-xl-12  col-sm-12 py-1">
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion accordion-2" id="accordionEx7" role="tablist"
+      aria-multiselectable="true">
+      <!-- Accordion card -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header rgba-stylish-strong z-depth-1 mb-1 bg-primary text-white" role="tab" id="heading1">
+          <a data-toggle="collapse" data-parent="#accordionEx7" href="#collapse1" aria-expanded="true"
+            aria-controls="collapse1">
+            <h5 class="mb-0 white-text text-uppercase font-thin text-white">
+              Account Details
+            </h5>
+          </a>
+        </div>
+        <!-- Card body -->
+        <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1"
+          data-parent="#accordionEx7">
+          <div class="card-body mb-1 rgba-grey-light white-text">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              {{  form.account_details.name  }}
+            </div>
+            <div class="col-md-12 col-sm-12">
+              {{  form.account_details.interest  }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              {{  form.account_details.deposit_date  }}
+            </div>
+            <div class="col-md-6 col-sm-12">
+              {{  form.account_details.maturity_date  }}
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                {{  form.finance_info.deposit_amount  }}
+              </div>
+              <div class="col-md-6 col-sm-12">
+                {{  form.finance_info.maturity_amount  }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                {{  form.finance_info.deposit_select  }}
+              </div>
+              <div class="col-md-6 col-sm-12">
+                {{  form.finance_info.selected_type  }}
+                {{  form.finance_info.bank_scheme  }}
+                {{  form.finance_info.bank_neme  }}
+                {{  form.finance_info.post_office_scheme  }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 justify-content-md-center d-flex">
+                {{  form.actions.submit  }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Accordion card -->
+      <!-- Accordion card -->
+    </div>
+    <!--/.Accordion wrapper-->
+  </div>
+  <!-- Grid column -->
+</div>
+<!-- Grid row -->
+
+{{ form.form_build_id }} {# required #}
+{{ form.form_token }}{# required #}
+{{ form.form_id }} {# required #}

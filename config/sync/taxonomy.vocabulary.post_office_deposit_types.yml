@@ -1,0 +1,8 @@
+uuid: 6c26cb05-be81-4e51-a8a5-650d43ed0a6b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Post Office Deposit Types'
+vid: post_office_deposit_types
+description: 'List of Available Post Office Deposits'
+weight: 0

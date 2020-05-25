@@ -1,0 +1,17 @@
+uuid: 610d5bbd-d7fd-4b10-a765-f7b4c3aacf3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Stock Information'
+type: stock_information
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

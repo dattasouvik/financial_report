@@ -1,0 +1,24 @@
+uuid: 6848477d-2c12-4172-b6ae-6890985529e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deposit_date
+    - node.type.deposit
+  module:
+    - datetime
+id: node.deposit.field_deposit_date
+field_name: field_deposit_date
+entity_type: node
+bundle: deposit
+label: 'Deposit Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

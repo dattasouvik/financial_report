@@ -1,0 +1,30 @@
+uuid: 23404fa4-59a5-4f5b-a6b1-9d9fe1170ba4
+langcode: en
+status: true
+dependencies:
+  module:
+    - deposit_info
+    - user
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_depositinformationpanel
+theme: bootstrap_barrio
+region: sidebar_second
+weight: 0
+provider: null
+plugin: custom_deposit_information_panel
+settings:
+  id: custom_deposit_information_panel
+  label: 'Deposit Information Panel'
+  provider: deposit_info
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      depositor: depositor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

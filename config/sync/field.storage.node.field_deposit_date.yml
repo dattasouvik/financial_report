@@ -1,0 +1,20 @@
+uuid: 33d9310c-ad4d-4e38-b1ae-07f029075c89
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_deposit_date
+field_name: field_deposit_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

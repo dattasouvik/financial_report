@@ -1,0 +1,23 @@
+uuid: ad6ff802-aa27-4bca-a786-d7bc0b701695
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quantity_purchased
+    - node.type.stock_information
+id: node.stock_information.field_quantity_purchased
+field_name: field_quantity_purchased
+entity_type: node
+bundle: stock_information
+label: 'Quantity Purchased'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

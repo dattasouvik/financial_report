@@ -1,0 +1,23 @@
+uuid: 5dd7609c-2c00-4c87-8b93-6628289eec6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annual_interest_rate
+    - node.type.deposit
+id: node.deposit.field_annual_interest_rate
+field_name: field_annual_interest_rate
+entity_type: node
+bundle: deposit
+label: 'Annual Interest Rate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: float

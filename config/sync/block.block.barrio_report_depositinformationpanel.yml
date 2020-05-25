@@ -1,0 +1,30 @@
+uuid: 228dfa38-f247-445e-ac85-03f98548aaef
+langcode: en
+status: true
+dependencies:
+  module:
+    - deposit_info
+    - user
+  theme:
+    - barrio_report
+id: barrio_report_depositinformationpanel
+theme: barrio_report
+region: sidebar_second
+weight: -5
+provider: null
+plugin: custom_deposit_information_panel
+settings:
+  id: custom_deposit_information_panel
+  label: 'Deposit Information Panel'
+  provider: deposit_info
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      depositor: depositor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

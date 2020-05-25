@@ -1,0 +1,19 @@
+uuid: b478f43c-0bd8-41ef-bc05-e74ab3a41652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost_price_per_unit
+    - node.type.stock_information
+id: node.stock_information.field_cost_price_per_unit
+field_name: field_cost_price_per_unit
+entity_type: node
+bundle: stock_information
+label: 'Cost Price per unit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

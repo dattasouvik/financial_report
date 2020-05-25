@@ -1,0 +1,23 @@
+uuid: 3ea6c247-dcb4-4d36-9c15-74e46f9cf953
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maturity_amount
+    - node.type.deposit
+id: node.deposit.field_maturity_amount
+field_name: field_maturity_amount
+entity_type: node
+bundle: deposit
+label: 'Maturity Amount'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ₹
+  suffix: ''
+field_type: float

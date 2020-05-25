@@ -1,0 +1,20 @@
+uuid: 8536d5da-b8cc-45db-a96b-849777026aac
+langcode: en
+status: true
+dependencies:
+  theme:
+    - barrio_report
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: barrio_report_local_actions
+theme: barrio_report
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

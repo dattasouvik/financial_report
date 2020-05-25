@@ -1,0 +1,21 @@
+uuid: 483c1bef-8f0b-4e3d-a726-b9bf1da14a69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_privacy_policy
+    - node.type.basic
+  module:
+    - text
+id: node.basic.field_privacy_policy
+field_name: field_privacy_policy
+entity_type: node
+bundle: basic
+label: 'Privacy Policy'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

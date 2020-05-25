@@ -1,0 +1,14 @@
+uuid: 80439772-6398-4e03-8fec-725412f8e67f
+langcode: en
+status: true
+dependencies: {  }
+id: stock_trader
+label: 'Stock Trader'
+weight: 4
+is_admin: null
+permissions:
+  - 'access stock information'
+  - 'create stock_information content'
+  - 'delete own stock_information content'
+  - 'edit own stock_information content'
+  - 'view own unpublished content'

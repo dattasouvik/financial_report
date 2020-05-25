@@ -1,0 +1,67 @@
+html,body{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;
+}
+.dialog-off-canvas-main-canvas,
+#page-wrapper,
+#page{
+  height: 100%;
+}
+#main-wrapper{
+  min-height: calc(100vh - 135px);
+}
+footer {
+  min-height: 50px;
+}
+
+#header > div:first-child,
+#header > div:nth-child(2){
+  display: none;
+}
+#navbar-top{
+  justify-content: flex-end;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg,rgba(0,212,255,1) 0%, rgba(9,121,118,1) 35%, rgba(2,0,36,1) 100% );
+}
+#navbar-main{
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 35%, rgba(0,212,255,1) 100%);
+}
+/* Modal Styling */
+.ui-dialog{
+  z-index: 9999;
+}
+.form-row>fieldset, .form-row>div {
+  max-width: 100%!important;
+}
+header a.nav-link{
+  color: #ffffff;
+}
+.navbar-toggler-icon{
+  color:#ffffff;
+}
+.navbar-expand-sm > .navbar-toggler{
+  margin: 0;
+  padding: 0
+}
+.sidebar .block {
+  border-style: none;
+}
+.view-empty{
+  border: solid;
+  border-width: 1px;
+  border-color: red;
+  padding: 1%;
+  margin: 2em 0 2em 0;
+}
+.login-block .list-group .list-group-item{
+  text-align: center;
+  border-top: none;
+}
+/* ol.msg-error li{
+list-style-type: none;
+} */

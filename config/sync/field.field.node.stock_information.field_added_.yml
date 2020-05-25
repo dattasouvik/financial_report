@@ -1,0 +1,28 @@
+uuid: 686d47ae-7de9-4c7a-bb9e-71feb489c9a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_added_
+    - node.type.stock_information
+id: node.stock_information.field_added_
+field_name: field_added_
+entity_type: node
+bundle: stock_information
+label: 'Added By'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

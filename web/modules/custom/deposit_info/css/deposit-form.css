@@ -1,0 +1,11 @@
+legend{
+  font-size: 20px !important;
+}
+button{
+  width: 100%;
+}
+/* .gradient-header{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 24%, rgba(0,212,255,1) 43%,
+   rgba(40,44,119,0.073564459963673) 64%, rgba(10,10,64,1) 83%);
+} */

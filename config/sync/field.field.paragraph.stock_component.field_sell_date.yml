@@ -1,0 +1,24 @@
+uuid: 2877f6e8-adca-47ff-91b2-2ed7859b8587
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sell_date
+    - paragraphs.paragraphs_type.stock_component
+  module:
+    - datetime
+id: paragraph.stock_component.field_sell_date
+field_name: field_sell_date
+entity_type: paragraph
+bundle: stock_component
+label: 'Sell Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+1 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

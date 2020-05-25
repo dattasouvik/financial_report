@@ -1,0 +1,20 @@
+uuid: 37a1f064-8c6a-49be-b459-bc12f39a2350
+langcode: en
+status: true
+dependencies:
+  module:
+    - deposit_info
+  theme:
+    - barrio_report
+id: userloginmanager
+theme: barrio_report
+region: primary_menu
+weight: 0
+provider: null
+plugin: user_login_manager
+settings:
+  id: user_login_manager
+  label: 'User Login Manager'
+  provider: deposit_info
+  label_display: '0'
+visibility: {  }

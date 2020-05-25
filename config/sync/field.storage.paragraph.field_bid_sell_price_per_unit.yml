@@ -1,0 +1,21 @@
+uuid: 76b0b0d2-f4b7-4586-acc0-8fc5354f7147
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_bid_sell_price_per_unit
+field_name: field_bid_sell_price_per_unit
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

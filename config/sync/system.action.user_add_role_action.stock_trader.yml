@@ -1,0 +1,14 @@
+uuid: 98b68338-041e-4ae5-ae1e-6a871b11702c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.stock_trader
+  module:
+    - user
+id: user_add_role_action.stock_trader
+label: 'Add the Stock Trader role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: stock_trader

@@ -1,0 +1,22 @@
+uuid: c41d5245-71b4-4e14-ace7-051dcdc0b723
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - barrio_report
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: barrio_report_content
+theme: barrio_report
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

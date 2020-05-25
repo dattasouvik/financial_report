@@ -1,0 +1,22 @@
+uuid: 7e2cac7b-ab0d-4ca4-89ac-d6b6d5741aa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: deposit_url_pattern
+label: 'Deposit Url Pattern'
+type: 'canonical_entities:node'
+pattern: '/deposit/[node:field_account_number]'
+selection_criteria:
+  eb39727c-2f82-4fda-b1a2-3f9a02ebd682:
+    id: node_type
+    bundles:
+      deposit: deposit
+    negate: false
+    context_mapping:
+      node: node
+    uuid: eb39727c-2f82-4fda-b1a2-3f9a02ebd682
+selection_logic: and
+weight: -5
+relationships: {  }

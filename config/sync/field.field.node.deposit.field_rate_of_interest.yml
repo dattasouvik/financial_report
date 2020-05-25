@@ -1,0 +1,23 @@
+uuid: b9a14c03-9963-4c39-a258-560bafbdcb3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rate_of_interest
+    - node.type.deposit
+id: node.deposit.field_rate_of_interest
+field_name: field_rate_of_interest
+entity_type: node
+bundle: deposit
+label: 'Rate Of Interest'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: float

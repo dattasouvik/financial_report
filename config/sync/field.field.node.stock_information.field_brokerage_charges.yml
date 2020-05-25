@@ -1,0 +1,23 @@
+uuid: 3997b592-9785-4cf9-93ca-961e2824e9f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brokerage_charges
+    - node.type.stock_information
+id: node.stock_information.field_brokerage_charges
+field_name: field_brokerage_charges
+entity_type: node
+bundle: stock_information
+label: 'Brokerage Charges (%)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

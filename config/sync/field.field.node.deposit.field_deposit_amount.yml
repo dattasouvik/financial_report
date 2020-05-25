@@ -1,0 +1,23 @@
+uuid: ae818e0f-f558-407c-8639-7ca521692892
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deposit_amount
+    - node.type.deposit
+id: node.deposit.field_deposit_amount
+field_name: field_deposit_amount
+entity_type: node
+bundle: deposit
+label: 'Deposit Amount'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ₹
+  suffix: ''
+field_type: float

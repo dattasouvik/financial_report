@@ -1,0 +1,14 @@
+uuid: f2d17067-5665-4d4a-9206-b75cb25a7d14
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.stock_trader
+  module:
+    - user
+id: user_remove_role_action.stock_trader
+label: 'Remove the Stock Trader role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: stock_trader

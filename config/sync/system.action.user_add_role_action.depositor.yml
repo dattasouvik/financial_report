@@ -1,0 +1,14 @@
+uuid: 58ac460c-057a-4db0-84a2-61cfeea3620f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.depositor
+  module:
+    - user
+id: user_add_role_action.depositor
+label: 'Add the Depositor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: depositor

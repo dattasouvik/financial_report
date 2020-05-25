@@ -1,0 +1,62 @@
+<?php
+/**
+* Implements hook_theme().
+*/
+function deposit_info_theme() {
+  return [
+    'deposit_information_panel' => [
+      'variables' => ['items' => NULL],
+      'path' => drupal_get_path('module', 'deposit_info') . '/templates/block',
+    ],
+    'user_login_manager' => [
+      'variables' => ['items' => NULL],
+      'path' => drupal_get_path('module', 'deposit_info') . '/templates/block',
+    ],
+    'add_deposit_form' => [
+      'render element' => 'form',
+      'template' => 'add-deposit-form',
+      // This will set to module/theme path by default:
+      'path' => drupal_get_path('module', 'deposit_info') . '/templates/form',
+    ],
+    'edit_deposit_form' => [
+      'render element' => 'form',
+      'template' => 'edit-deposit-form',
+      // This will set to module/theme path by default:
+      'path' => drupal_get_path('module', 'deposit_info') . '/templates/form',
+    ],
+  ];
+}
+/**
+ * Implements hook_cron()
+*/
+function deposit_info_cron()
+{
+  $old_nodes = \Drupal::service('deposit_info.old_nodes')->load();
+  if(!empty($old_nodes)){
+    foreach ($old_nodes as $node)
+    {
+      $node->set("field_status", 0);
+      $node->setPublished(false);
+      $node->save();
+      /* Sending Mail */
+      $send_mail = \Drupal::service('deposit_info.mail_handler')->sendMail('archived', $node->id() );
+    }
+  }
+}
+/**
+ * Implements hook_user_login()
+*/
+function deposit_info_user_login($account) {
+  $current_user = \Drupal::currentUser();
+  $uid = $current_user->id();
+  $user_storage = \Drupal::entityTypeManager()->getStorage('user');
+  $user = $user_storage->load($uid);
+  if($user){
+    $roles = $user->getRoles();
+    if(in_array('depositor', $roles)){
+      $reset_url = user_pass_reset_url($user);
+      $notifyMail = \Drupal::service('deposit_info.mail_handler')->notifyMail('alert-user',$uid,$reset_url);
+      return;
+    }
+  }
+}

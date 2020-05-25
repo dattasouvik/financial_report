@@ -1,0 +1,19 @@
+uuid: 3cc4a6e5-fa18-44c1-a5e4-309c8d2efcb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bank_name
+    - node.type.deposit
+id: node.deposit.field_bank_name
+field_name: field_bank_name
+entity_type: node
+bundle: deposit
+label: 'Bank Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

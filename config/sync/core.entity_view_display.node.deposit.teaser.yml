@@ -1,0 +1,20 @@
+uuid: 8fd1226c-535a-43d6-bf34-8d261bba3aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.deposit
+  module:
+    - user
+id: node.deposit.teaser
+targetEntityType: node
+bundle: deposit
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

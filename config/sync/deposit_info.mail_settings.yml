@@ -1,0 +1,8 @@
+smtp_host: smtp.gmail.com
+smtp_port: '587'
+display_username: Report
+smtp_username: souvik2vt@gmail.com
+smtp_password: Nascom@258
+recipient_email: dattasreejita9@gmail.com
+email_header: "<span><b>Hi Recipient</b>,</span><br>\r\n<span>This is to notify you that following action  needs your attention.</span>"
+email_footer: "<p  id=\"mail\" style=\"color: #FFEB3B;\">Please ignore the mail if you are not the correct  recipient</p>\r\n<span>Thanks and regards,</span><br>\r\n<span><b>Reports Team</b></span>"

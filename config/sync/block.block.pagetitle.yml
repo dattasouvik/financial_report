@@ -1,0 +1,25 @@
+uuid: 2521a18b-4ce4-44fc-b333-2ba7d2f58133
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - barrio_report
+id: pagetitle
+theme: barrio_report
+region: highlighted
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/user\r\n/user/*"
+    negate: true
+    context_mapping: {  }

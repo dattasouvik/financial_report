@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+.alert-wrapper {
+  position: static;
+}
+.ui-dialog{
+  width: 100% !important;
+}

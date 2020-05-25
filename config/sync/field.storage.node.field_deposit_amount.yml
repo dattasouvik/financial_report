@@ -1,0 +1,18 @@
+uuid: 787f9f0f-b03e-475a-bcb5-ca10b465d5e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_deposit_amount
+field_name: field_deposit_amount
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
