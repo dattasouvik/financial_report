@@ -11,23 +11,34 @@
 
 
 ### Steps to install:-
+```
 1.Install database by using 
 ## mysql -u <username> -p <database_name> < financial_report.sql
+```
 2.Install dependecies by using
 ## composer install
+```
 3.Add entry in httpd-vhosts.conf file and update settings.php as per database credentials.
+```
 4.Update configuration in /admin/config/mail-configuration for email notification.
-
-
+```
 
 ### Workflow:-
+```
 1.Admin creates accounts for users and provide them credentials for first login.
+```
 2.User creates  deposit entries and submit data into the system.
+```
 3.User can edit and update deposit entries from dashboard.
+```
 4.User can analyse deposits with data visualisation from Investment Tracker menu.
+```
 5.User can generate report on deposits and gets notified on every deposit maturity.Also Expired Deposits status gets changed to Closed.
+```
 6.Admin is able to view/update deposit information for any user.
+```
 7.Admin can add more options only in  Post Office Deposit Types & Bank Deposit Types from taxonomies.
+```
 
 
 ### Features:-
