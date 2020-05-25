@@ -176,6 +176,7 @@ To prevent this you can add this code to specify the PHP version you want to use
 Admin: 
 	Username: admin@gmail.com	
 	password: admin
+	
 User1: 
 	Username: user1@gmail.com	
 	password: user1
