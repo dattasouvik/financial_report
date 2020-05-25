@@ -1,3 +1,61 @@
+### Sample Images:-	
+
+	
+| Admin View   |
+|--------------|
+| <img src="/sample_images/admin-view.png"> |
+| Deposit Form     |
+| <img src="/sample_images/add-deposit.png"> |
+| Homepage     |
+| <img src="/sample_images/home-page.png"> |
+
+
+### Steps to install:-
+1.Install database by using 
+## mysql -u <username> -p <database_name> < financial_report.sql
+2.Install dependecies by using
+## composer install
+3.Add entry in httpd-vhosts.conf file and update settings.php as per database credentials.
+4.Update configuration in /admin/config/mail-configuration for email notification.
+
+
+
+### Workflow:-
+1.Admin creates accounts for users and provide them credentials for first login.
+2.User creates  deposit entries and submit data into the system.
+3.User can edit and update deposit entries from dashboard.
+4.User can analyse deposits with data visualisation from Investment Tracker menu.
+5.User can generate report on deposits and gets notified on every deposit maturity.Also Expired Deposits status gets changed to Closed.
+6.Admin is able to view/update deposit information for any user.
+7.Admin can add more options only in  Post Office Deposit Types & Bank Deposit Types from taxonomies.
+
+
+### Features:-
+1. Dynamic CSV Report Genaeration
+```
+2. Email Notification  based on actions
+```
+3. Data visualisation with the help of Chart JS
+```
+4. Cron schedulead at a particular time to update status of reports. 
+```
+
+### Credentials:-
+### These are dummy data for demo only:-
+
+Admin: 
+	Username: admin@gmail.com	
+	password: admin
+	
+User1: 
+	Username: user1@gmail.com	
+	password: user1
+	
+	
+User2: 
+	Username: user2@gmail.com	
+	password: user2
+
 # Composer template for Drupal projects
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
@@ -144,47 +202,6 @@ To prevent this you can add this code to specify the PHP version you want to use
 },
 ```
 
-### Steps to install:-
-1.Install database by using 
-## mysql -u <username> -p <database_name> < financial_report.sql
-2.Install dependecies by using
-## composer install
-3.Add entry in httpd-vhosts.conf file and update settings.php as per database credentials.
-4.Update configuration in /admin/config/mail-configuration for email notification.
-
-
-
-### Workflow:-
-1.Admin creates accounts for users and provide them credentials for first login.
-2.User creates  deposit entries and submit data into the system.
-3.User can edit and update deposit entries from dashboard.
-4.User can analyse deposits with data visualisation from Investment Tracker menu.
-5.User can generate report on deposits and gets notified on every deposit maturity.Also Expired Deposits status gets changed to Closed.
-6.Admin is able to view/update deposit information for any user.
-7.Admin can add more options only in  Post Office Deposit Types & Bank Deposit Types from taxonomies.
-
-
-### Features:-
-1. Dynamic CSV Report Genaeration
-2. Email Notification  based on actions
-3. Data visualisation with the help of Chart JS
-4. Cron schedulead at a particular time to update status of reports. 
-
-### Credentials:-
-### These are dummy data for demo only:-
-
-Admin: 
-	Username: admin@gmail.com	
-	password: admin
-	
-User1: 
-	Username: user1@gmail.com	
-	password: user1
-	
-	
-User2: 
-	Username: user2@gmail.com	
-	password: user2
 
 
 ### Drush Cache clear:-
